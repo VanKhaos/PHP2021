@@ -1,0 +1,25 @@
+.eingabe, .ausgabe{
+    width: 50%;
+}
+.eingabe img{
+    float: right;
+    height: 200px;
+    width: 200px;
+}
+
+.ausgabe img{
+    float: right;
+    height: 110px;
+    width: 110px;
+    padding-right: 45px;
+}
+
+
+#berechnen{
+    margin: 10px 0 0 0;
+}
+
+.box{
+    float: left;
+    padding: 20px;
+}

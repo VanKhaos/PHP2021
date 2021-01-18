@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kassenautomat</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<h1>Kassenautomat</h1>
+<form method="get" action="">
+
+    <fieldset class="eingabe">
+        <legend>Eingabe</legend>
+
+        <img src="images/cash-register.png" alt="Kasse"/><br/>
+
+        <label for="preis">Preis &euro;:</label><br/>
+        <input type="number" name="preis" id="preis" step="0.01" placeholder="0,00"><br/>
+
+        <label for="betrag">Betrag &euro;:</label><br/>
+        <input type="number" name="betrag" id="betrag" step="0.01" placeholder="0,00"><br/>
+
+        <input type="submit" id="berechnen" value="Berechnen">
+
+    </fieldset>
+
+    <fieldset class="ausgabe">
+        <legend>Ausgabe</legend>
+
+        <img src="images/euro-coins-euro-coins.jpg" alt="Restgeld"/>
+        <div class="box">
+            <label>2,00 € x </label> <label id="200">0</label><br/>
+            <label>1,00 € x </label> <label id="100">0</label><br/>
+            <label>0,50 € x </label> <label id="050">0</label><br/>
+            <label>0,20 € x </label> <label id="020">0</label><br/>
+        </div>
+
+        <div class="box">
+            <label>0,10 € x </label> <label id="010">0</label><br/>
+            <label>0,05 € x </label> <label id="005">0</label><br/>
+            <label>0,02 € x </label> <label id="002">0</label><br/>
+            <label>0,01 € x </label> <label id="001">0</label><br/>
+        </div>
+
+    </fieldset>
+</form>
+
+
+</body>
+</html>
