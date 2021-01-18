@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <title>Kassenautomat</title>
     <link rel="stylesheet" href="style/style.css">
+
+    <script type="application/javascript">
+        function berechnen(event){
+            var preis = parseFloat(document.getElementById("preis").value);
+            var betrag = parseFloat(document.getElementById("betrag").value);
+
+            var restgeld = ((betrag - preis) * 100);
+
+            document.getElementById("e200").innerHTML = ((restgeld / 200) - 0.5).toFixed();
+            restgeld = restgeld % 200;
+            document.getElementById("e100").innerHTML = ((restgeld / 100) - 0.5).toFixed();
+            restgeld = restgeld % 100;
+            document.getElementById("e050").innerHTML = ((restgeld / 50) - 0.5).toFixed();
+            restgeld = restgeld % 50;
+            document.getElementById("e020").innerHTML = ((restgeld / 20) - 0.5).toFixed();
+            restgeld = restgeld % 20;
+            document.getElementById("e010").innerHTML = ((restgeld / 10) - 0.5).toFixed();
+            restgeld = restgeld % 10;
+            document.getElementById("e005").innerHTML = ((restgeld / 5) - 0.5).toFixed();
+            restgeld = restgeld % 5;
+            document.getElementById("e002").innerHTML = ((restgeld / 2) - 0.5).toFixed();
+            restgeld = restgeld % 2;
+            document.getElementById("e001").innerHTML = (restgeld).toFixed();
+            restgeld = restgeld % 1;
+
+        }
+    </script>
+
+
 </head>
 <body>
 <h1>Kassenautomat</h1>
-<form method="get" action="">
+<form method="get" action="javascript:berechnen(event);">
 
     <fieldset class="eingabe">
         <legend>Eingabe</legend>
@@ -29,17 +58,17 @@
 
         <img src="images/euro-coins-euro-coins.jpg" alt="Restgeld"/>
         <div class="box">
-            <label>2,00 € x </label> <label id="200">0</label><br/>
-            <label>1,00 € x </label> <label id="100">0</label><br/>
-            <label>0,50 € x </label> <label id="050">0</label><br/>
-            <label>0,20 € x </label> <label id="020">0</label><br/>
+            <label>2,00 € x </label> <label id="e200">0</label><br/>
+            <label>1,00 € x </label> <label id="e100">0</label><br/>
+            <label>0,50 € x </label> <label id="e050">0</label><br/>
+            <label>0,20 € x </label> <label id="e020">0</label><br/>
         </div>
 
         <div class="box">
-            <label>0,10 € x </label> <label id="010">0</label><br/>
-            <label>0,05 € x </label> <label id="005">0</label><br/>
-            <label>0,02 € x </label> <label id="002">0</label><br/>
-            <label>0,01 € x </label> <label id="001">0</label><br/>
+            <label>0,10 € x </label> <label id="e010">0</label><br/>
+            <label>0,05 € x </label> <label id="e005">0</label><br/>
+            <label>0,02 € x </label> <label id="e002">0</label><br/>
+            <label>0,01 € x </label> <label id="e001">0</label><br/>
         </div>
 
     </fieldset>
