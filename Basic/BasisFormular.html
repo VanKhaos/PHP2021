@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script type="application/javascript">
+        function upper(event){
+            /*
+            DOM Document Object Model
+            Beschreibt die Elemente der HTML Seite als objekt
+            Objekt Document für die gesamte HTML Seite
+
+            getElementById("id")            = liefert das erste Element mit der angegeben ID
+            getElementsByClass("Classname") = liefert eine Liste mit allen Elementen mit class="Classname"
+
+            Element
+            Eigenschaft     value       input
+                            innerText   Label       <label> innerText </label>
+                            options     Select      Liste mit den Optionen der Liste
+            */
+
+            var elem = document.getElementById("nachname");
+            elem.innerText = "Name";
+            elem = document.getElementById("nachname");
+            elem.value = "Maier";
+        }
+    </script>
+
+</head>
+<body onload="upper(event)">
+    <from method="get" action="">
+        <fieldset>
+            <legend>Person</legend>
+
+            <label for="Nachname">Nachname</label>
+
+            <!--
+
+            Eigenschaften für Input
+
+            id          = ID vom Element
+            name        = Name vom Element
+            type        = text, submit, password, checkbox, radio, hidden, ...
+            placeholder = Muster für Eingabe
+            required    = Erfordert Eingabe
+            readonly    = Nicht beschreibar / nur Lesen
+            disabled    = Nicht aktiv / Erscheint ausgegraut
+            pattern     = Prüfmuster
+                        [Wertebereich] {Häufigkeit} (Wiederholungsgruppe) {Häufigkeit}
+                        Häufigkeit min, max | min = max => genau max
+
+                        Beispiel Nachname:
+                        [A-ZÄÖÜ] {1} [a-zäöüß] {1-12} ([ -] {1} [a-zäöüß] {1-12}) {0,2}
+                        Maier
+                        Maier Schultz
+                        Maier-Schultz
+
+                        Beispiel Ziffern
+                        [0-9] {5} || Genau 5 Ziffern min = max
+
+            value       = Defaultwert / Text
+
+            -->
+
+            <input
+                    id="nachname"
+                    name="nachname"
+                    type="text"
+                    placeholder="Muster"
+                    required
+                    pattern="[A-ZÄÖÜ] {1} [a-zäöüß] {1-12} ([ -] {1} [a-zäöüß] {1-12}) {0,2}"
+
+            /><br/>
+
+            <input type="submit" value="Senden">
+        </fieldset>
+    </from>
+</body>
+</html>
