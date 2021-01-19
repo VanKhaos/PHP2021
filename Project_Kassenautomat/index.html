@@ -10,24 +10,25 @@
             var preis = parseFloat(document.getElementById("preis").value);
             var betrag = parseFloat(document.getElementById("betrag").value);
 
-            var restgeld = ((betrag - preis) * 100);
+            var restgeld = Math.floor((betrag - preis) * 100);
 
-            document.getElementById("e200").innerHTML = ((restgeld / 200) - 0.5).toFixed();
-            restgeld = restgeld % 200;
-            document.getElementById("e100").innerHTML = ((restgeld / 100) - 0.5).toFixed();
-            restgeld = restgeld % 100;
-            document.getElementById("e050").innerHTML = ((restgeld / 50) - 0.5).toFixed();
-            restgeld = restgeld % 50;
-            document.getElementById("e020").innerHTML = ((restgeld / 20) - 0.5).toFixed();
-            restgeld = restgeld % 20;
-            document.getElementById("e010").innerHTML = ((restgeld / 10) - 0.5).toFixed();
-            restgeld = restgeld % 10;
-            document.getElementById("e005").innerHTML = ((restgeld / 5) - 0.5).toFixed();
-            restgeld = restgeld % 5;
-            document.getElementById("e002").innerHTML = ((restgeld / 2) - 0.5).toFixed();
-            restgeld = restgeld % 2;
-            document.getElementById("e001").innerHTML = (restgeld).toFixed();
-            restgeld = restgeld % 1;
+
+                // Alternativ: document.getElementById("e200").innerHTML = ((restgeld / 200) - 0.5).toFixed();
+                document.getElementById("e200").innerHTML = Math.floor((restgeld / 200));
+                restgeld = restgeld % 200;
+                document.getElementById("e100").innerHTML = Math.floor(restgeld / 100);
+                restgeld = restgeld % 100;
+                document.getElementById("e050").innerHTML = Math.floor(restgeld / 50);
+                restgeld = restgeld % 50;
+                document.getElementById("e020").innerHTML = Math.floor(restgeld / 20);
+                restgeld = restgeld % 20;
+                document.getElementById("e010").innerHTML = Math.floor(restgeld / 10);
+                restgeld = restgeld % 10;
+                document.getElementById("e005").innerHTML = Math.floor(restgeld / 5);
+                restgeld = restgeld % 5;
+                document.getElementById("e002").innerHTML = Math.floor(restgeld / 2);
+                restgeld = restgeld % 2;
+                document.getElementById("e001").innerHTML = restgeld.toFixed();
 
         }
     </script>
