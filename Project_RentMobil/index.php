@@ -103,11 +103,6 @@
     </head>
 
     <body>
-        <form method="get" action="">
-            <input name="action" type="submit" value="Neuer Vertrag"/>
-            <input name="action" type="submit" value="Neues Auto"/>
-        </form>
-
         <!-- NEUER KUNDE -->
         <form method="get" action="">
             <fieldset>
