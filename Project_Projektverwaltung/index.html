@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        main,
+        iframe,
+        nav,
+        article {
+            height: 100%;
+        }
+        
+        header,
+        main,
+        iframe {
+            width: 100%;
+            float: left;
+        }
+        
+        article {
+            width: 70%;
+            float: right;
+        }
+        
+        nav {
+            width: 20%;
+            float: left;
+        }
+    </style>
+    <title>Projektverwaltung</title>
+</head>
+
+<body>
+    <header>
+        <h1>Projektverwaltung</h1>
+    </header>
+    <main>
+        <nav>
+            <h2>Mitarbeiter</h2>
+            <a href="Mitarbeiter.html.php" target="view">Anlegen</a> <br>
+            <a href="Mitarbeiter.html.php?action=Suchen" target="view">Suchen</a> <br>
+            <a href="Mitarbeiter.html.php?action=Ändern" target="view">Ändern</a> <br>
+            <a href="Mitarbeiter.html.php?action=Löschen" target="view">Löschen</a> <br>
+            <h2>Abteilung</h2>
+            <a href="Abteilung.html.php" target="view">Anlegen</a> <br>
+            <a href="Abteilung.html.php?action=Suchen" target="view">Suchen</a> <br>
+            <a href="Abteilung.html.php?action=Ändern" target="view">Ändern</a> <br>
+            <a href="Abteilung.html.php?action=Löschen" target="view">Löschen</a> <br>
+            <h2>Projekt</h2>
+            <a href="Projekt.html.php" target="view">Anlegen</a> <br>
+            <a href="Projekt.html.php?action=Suchen" target="view">Suchen</a> <br>
+            <a href="Projekt.html.php?action=Ändern" target="view">Ändern</a> <br>
+            <a href="Projekt.html.php?action=Löschen" target="view">Löschen</a> <br>
+            <h2>Mitarbeiter_Projekt</h2>
+            <a href="Mitarbeiter_Projekt.html.php" target="view">Anlegen</a> <br>
+            <a href="Mitarbeiter_Projekt.html.php?action=Suchen" target="view">Suchen</a> <br>
+            <a href="Mitarbeiter_Projekt.html.php?action=Ändern" target="view">Ändern</a> <br>
+            <a href="Mitarbeiter_Projekt.html.php?action=Löschen" target="view">Löschen</a> <br>
+        </nav>
+        <article>
+            <iframe name="view"></iframe>
+        </article>
+    </main>
+</body>
+
+</html>
